@@ -1,0 +1,404 @@
+*{ /*selects all elements*/
+  margin: 0;
+  padding: 0;
+  box-sizing: 
+  border-box; /* lines up all columns*/
+}
+header{
+  text-align: center;
+}
+body{
+    margin:0px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none; /*remove text underline*/
+}
+
+li {
+  list-style: none;
+}
+
+/* The navbar container */
+/* Navbar bar */
+.navbar {
+  /* overflow: hidden; fit small screens */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: palevioletred;
+  padding: 20px;
+}
+
+/* Navbar links */
+.nav-links a {
+color: white;
+text-decoration: none;
+}
+
+/* navbar menu */
+.menu{
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+/* Add a background color to navbar links on hover */
+.menu li:hover{
+  background-color: rgb(118, 22, 54);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+/* menu lists */
+.menu li{
+  padding: 5px 14px;
+}
+
+/* Dropdown menu */
+.projects{
+  position: relative;
+}
+
+/* Dropdown button */
+.dropdown{
+  background-color: palevioletred;
+  padding: 1em 0;
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+  position: absolute; /*with respect to parent*/
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+/* Links inside the dropdown */
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown li:hover {
+  background-color: rgb(118, 22, 54);
+}
+
+/* Show the dropdown menu on hover */
+.projects:hover .dropdown {
+  display: block;
+}
+
+/* responsive css */
+/* checkbox */
+input[type=checkbox] {
+  display: none;
+} 
+
+/* hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+  /* let the user know which page he/she is on */
+  .active {
+    background-color: rgb(118, 22, 54);
+  } 
+
+  /* stack the nav vertically when the screen size is 600px or less */
+  @media (max-width: 768px) {
+    .menu {
+       display:none;
+       position: absolute;
+       background-color:palevioletred;
+       right: 0;
+       left: 0;
+       text-align: center;
+       padding: 16px 0;
+     }
+   
+     .menu li:hover {
+       display: inline-block;
+       background-color:rgb(118, 22, 54);
+       transition: 0.3s ease;
+     }
+   
+     .menu li + li {
+       margin-top: 12px;
+     }
+   
+     input[type=checkbox]:checked ~ .menu {
+       display: block;
+     }
+   
+     .hamburger {
+       display: block;
+     }
+   
+     .dropdown {
+       left: 50%;
+       top: 30px;
+       transform: translateX(35%);
+     }
+   
+     .dropdown li:hover {
+       background-color: rgb(118, 22, 54);
+     }
+   }
+
+  /* nav bar container ends here */
+
+  /* top article begins here */
+
+
+  @media screen and (max-width: 600px) {
+    image.fit{ /* Responsive layout - adjust pic for small screens */
+      max-width: 25%;
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+  /* .image.fit{
+    display: block;
+    width: 25%;
+    border-radius: 50%;
+  } */
+
+  /* top article ends here */
+  
+  /* typewriter styling starts here */
+  #typewriter {
+    color: palevioletred;
+    font-weight: bold;
+  }
+  
+  #cursor {
+    color: black;
+    animation: blink 5s linear infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 100%;
+    }
+    50% {
+      opacity: 0%;
+    }
+  }
+  /* typewriter styling ends here */
+
+  /* button starts here */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+
+.center-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 20px;
+    background-color: palevioletred;
+    border-radius: 100px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 0 0 2px palevioletred;
+    cursor: pointer;
+    overflow: hidden; /* resizing for small screens */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: palevioletred;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+    text-align: center;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: palevioletred;
+    border-radius: 25%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: white;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: rgb(84, 27, 46)
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px rgb(84, 27, 46);
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+  /* button ends here */
+
+  /* cart section begins here */
+
+  .slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+    min-height: 100vh;
+  }
+  
+  .card-list .card-item {
+    height: auto;
+    color: #fff;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background: palevioletred;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .card-list .card-item .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid white;
+    padding: 4px;
+  }
+  
+  .card-list .card-item .description {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 14px 0 40px;
+  }
+  
+  .card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: rgb(11, 11, 11);
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: white;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+  }
+  
+  .card-list .card-item .message-button:hover {
+    background: rgb(84, 27, 46);
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .slider-wrapper .swiper-pagination-bullet {
+    background: palevioletred;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+  }
+  
+  .slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
+  .slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -55px;
+    transition: 0.2s ease;
+  }
+  
+  .slider-wrapper .swiper-slide-button:hover {
+    color: rgb(84, 27, 46);
+  }
+  
+  @media (max-width: 768px) {
+    .slider-wrapper {
+      margin: 0 10px 40px;
+    }
+  
+    .slider-wrapper .swiper-slide-button {
+      display: none;
+    }
+  }
+ 
+  /* cart ends here */
+
+  /* Style the footer */
+  .footer {
+    display: block;
+    clear: both;
+    background-color: palevioletred;
+    text-align: center;
+    padding: 25px;
+  }

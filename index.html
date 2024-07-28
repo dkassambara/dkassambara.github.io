@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Djeneba's portfolio</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
+        <meta name="description" content="Djeneba's portfolio that include her resume and products worked on">
+		<!-- Linking SwiperJS CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <!-- linking bootrasp button design -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header>
+            <!-- <nav begins here -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <!-- using checkbox -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <div class="menu">
+                    <li><a href="#navbar">Home</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                        <li class="projects">
+                            <a href="#projects">Projects
+                                <!-- dropdown menu -->
+                                <ul class="dropdown"> 
+                                    <li><a href="projects/project1.html">Project name1</a></li>
+                                    <li><a href="projects/project2.html">Project name2</a></li>
+                                    <li><a href="projects/project3">Project name3</a></li>
+                                </ul>
+                            </a>
+                        </li>
+                    <li><a href="#contact">Contact</a></li>
+                </div>
+            </ul>
+        </nav>
+            <!-- nav bar ends here -->
+        </header>
+
+        <!-- main start here -->
+        <main>
+            <!--Home-->
+            <!-- profile pic, short description and resume -->
+            <article id="intro">
+                <div class="container">
+                    <div class="card p-3 py-4">
+                        <div class="text-center"> 
+                            <img src="images/profile.png" width="100" class="rounded-circle">
+                                <!-- <h1 class="mt-2">Djeneba Kassambara</h1> -->
+                                    <span class="mt-1">
+                                        <h2>Hi, I'm Djeneba Kassambara
+                                            <br>
+                                            I like to 
+                                            <span id="typewriter" color="palevioletred"></span>
+                                            <span id="cursor" color="palevioletred"></span>
+                                        </h2>
+                                        <!-- linkink typewriter script -->
+                                        <script src="typewriterScript.js"></script>
+                                    </span>
+                                    
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+            <article id="resume">
+                <div class="container">
+                    <div class="center-botton">
+                        <a href="https://drive.google.com/file/d/1v22AQdZLHAURS3gL-0zdo5jdggIRYanW/view?usp=sharing" style="text-decoration:none">
+                            <button class="animated-button">
+                                
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                    ></path>
+                                </svg>
+                                    <span class="text">Take a look at my resume</span>
+                                    <span class="circle"></span>
+                                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                        ></path>
+                                </svg>
+
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </article>
+                
+            
+            <!-- first section ends here -->
+
+            <!-- project section start here -->
+            <article id="projects">
+                <div class="container swiper">
+                    <div class="slider-wrapper">
+                        <div class="card-list swiper-wrapper">
+                            <div class="card-item swiper-slide">
+                                <img src="images/img-2.jpg" alt="User Image" class="user-image">
+                                <h2 class="user-name">Project Name</h2>
+                                <p class="description" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore totam eaque doloremque cumque modi temporibus at optio nam, vero nemo impedit fugit? Repellendus odit itaque pariatur facere! Inventore, mollitia veritatis.</p>
+                                <button class="message-button">Learn more</button>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/img-2.jpg" alt="User Image" class="user-image">
+                                <h2 class="user-name">Project Name</h2>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum officiis ad harum debitis alias totam eius, sapiente iste neque porro nostrum, nam animi, voluptatibus aut? Perspiciatis voluptates aperiam sequi libero?</p>
+                                <button class="message-button">Learn more</button>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/img-2.jpg" alt="User Image" class="user-image">
+                                <h2 class="user-name">Project Name</h2>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque reprehenderit soluta molestiae nobis quod animi nesciunt odio illo iusto deserunt labore unde quaerat culpa similique facilis fugit, quisquam eligendi praesentium.</p>
+                                <button class="message-button">Learn more</button>
+                            </div>
+
+                            <!-- <div class="card-item swiper-slide">
+                                <img src="images/img-4.jpg" alt="User Image" class="user-image">
+                                <h2 class="user-name">Project Name</h2>
+                                <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam illum iste laboriosam molestias adipisci, totam eligendi ipsa vero molestiae voluptatem ratione error dolor architecto quisquam alias sapiente reiciendis asperiores beatae!</p>
+                                <button class="message-button">Learn more</button>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/img-5.jpg" alt="User Image" class="user-image">
+                                <h2 class="user-name">Project Name</h2>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolore cum voluptates! Dolorem, exercitationem facilis? Quisquam, totam! Ipsam, aliquid minima! A, ab sit maxime corporis beatae error ipsam. Nulla, illo!</p>
+                                <button class="message-button">Learn more</button>
+                            </div>
+
+                            <div class="card-item swiper-slide">
+                                <img src="images/img-6.jpg" alt="User Image" class="user-image">
+                                <h2 class="user-name">Project Name</h2>
+                                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero architecto cumque earum inventore ratione odit error, officiis atque est obcaecati rem quasi accusantium eligendi ducimus cum alias aspernatur blanditiis molestias?</p>
+                                <button class="message-button">Learn more</button>
+                            </div> -->
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                        </div>
+                    </div>
+
+                    <!-- Linking SwiperJS script -->
+                    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                    <!-- Linking custom script -->
+                    <script src="CartScript.js"></script>
+            </article>
+            <!-- projects section end here -->
+
+            <!-- contact section begins here -->
+            <article id="contact">
+                <div class="container">
+                    <div class="center-button">
+                        <a href = "mailto:dkassambara347@gmail.com" class="confirmation"
+                        style="text-decoration:none">
+                            <button class="animated-button">
+                            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                ></path>
+                            </svg>
+                                <span class="text" >Email me</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                    ></path>
+                            </svg>
+                            <script src="verification.js"></script>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <!-- contact section ends here -->
+
+        <!-- main starts here -->
+        </main>
+        <!-- main ends here -->
+
+        <!-- footer starts here -->
+        <footer>
+            <div class="footer">
+                <!-- <p>Footer</p> -->
+              </div>
+        </footer>
+        <!-- footer ends here -->
+    </body>
+</html>
